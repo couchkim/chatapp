@@ -1,1 +1,1 @@
-# chatapp
+# updated-project-starter
