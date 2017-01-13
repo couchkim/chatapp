@@ -4,7 +4,7 @@
 
 
 
-module.exports =
+module.exports = Player;
 
 function Player(name) {
     this.name = name;
@@ -17,15 +17,18 @@ function Player(name) {
         if(this.type === 'chaser' && person.type === 'runner'){
             person.status = 'frozen';
         }
+    }
     this.flag = function(person){
         if(this.type === 'runner' && this.status === 'unfrozen'){
             return true;
         }else{
             return false;
-            }
+        
         }
      
     };
     return this;
 };
 
+// add haveFlag = true or false
+// check haveFlag in the team won function
