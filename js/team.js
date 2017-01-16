@@ -19,14 +19,14 @@ status frozen.*/
         }
 
         this.won = function () {
-            if (type === 'runners') {
+            if (this.type === 'runners') {
                 for (let i = 0; i < this.team.length; i++) {
-                    if (player[i].flag === true) {
+                    if (this.team[i].haveFlag === true) {
                         return true;
                     } else {
-                        if (type === 'chasers') {
+                        if (this.type === 'chasers') {
                             for (i = 0; i < this.team.length; i++) {
-                                if (chasers.name[i].status === 'unfrozen') {
+                                if (this.team[i].frozen === false) {
                                     return false;
                                 }
                             }

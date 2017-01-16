@@ -9,22 +9,25 @@ module.exports = Player;
 function Player(name) {
     this.name = name;
     this.type = null;
-    this.status = 'unfrozen';
+    // this.status = 'unfrozen';
+    this.frozen = false;
     this.tag = function(person){
-        if(this.type === 'runner' && this.status === 'unfrozen' && person.type === "runner"){
-                person.status = 'unfrozen';
-            };
+        if(this.type === 'runner' && this.frozen === false && person.type === 'runner'){
+             person.frozen = false;
+             return person.frozen;
+            }
         if(this.type === 'chaser' && person.type === 'runner'){
-            person.status = 'frozen';
+            person.frozen = true;
+            return person.frozen;
         }
-    }
-    this.flag = function(person){
-        if(this.type === 'runner' && this.status === 'unfrozen'){
-            return true;
-        }else{
-            return false;
-        
+    };  
+    this.haveFlag = false;
+    this.flag = function(){
+        if(this.type === 'runner' && this.frozen === false){
+            this.haveFlag = true;
+    
         }
+        return this.haveFlag;
      
     };
     return this;

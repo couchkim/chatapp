@@ -37,10 +37,23 @@ runners.add(players[9]);
 console.log(chasers);
 console.log(runners);
 
-chasers.won();
-runners.won();
+players[0].tag(players[9]);
+console.log(players[9].frozen);
+players[2].tag(players[7]);
+console.log(players[7].frozen);
 
 console.log(chasers.won());
+console.log(runners.won());
+
+console.log(players[7].flag());
+
+
+
+
+// chasers.won();
+// runners.won();
+
+// console.log(chasers.won());
 
 })
 
