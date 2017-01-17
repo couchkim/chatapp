@@ -38,24 +38,17 @@ console.log(chasers);
 console.log(runners);
 
 players[0].tag(players[9]);
-console.log(players[9].frozen);
-players[2].tag(players[7]);
-console.log(players[7].frozen);
+players[2].tag(players[7])
 players[5].tag(players[7]);
-console.log(players[7].frozen);
 
-console.log(chasers.won(runners));
-console.log(runners.won(chasers));
 
 console.log(players[7].flag());
 
 console.log(runners.won(chasers));
 
-players[0].tag(players[1]);
-players[0].tag(players[3]);
-players[0].tag(players[5]);
-players[0].tag(players[7]);
-
+let game2result = require('./game2');
+let result = game2result(players);
+console.log(game2result(players));
 console.log(chasers.won(runners));
 
 
