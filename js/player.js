@@ -12,22 +12,23 @@ function Player(name) {
     // this.status = 'unfrozen';
     this.frozen = false;
     this.tag = function(person){
-        if(this.type === 'runner' && this.frozen === false && person.type === 'runner'){
+        if(this.type === 'runners' && this.frozen === false && person.type === 'runners'){
              person.frozen = false;
              return person.frozen;
             }
-        if(this.type === 'chaser' && person.type === 'runner'){
+        if(this.type === 'chasers' && person.type === 'runners'){
             person.frozen = true;
             return person.frozen;
         }
     };  
     this.haveFlag = false;
     this.flag = function(){
-        if(this.type === 'runner' && this.frozen === false){
+        if(this.type === 'runners' && this.frozen === false){
             this.haveFlag = true;
+            return this.haveFlag;
     
         }
-        return this.haveFlag;
+        
      
     };
     return this;

@@ -41,36 +41,24 @@ players[0].tag(players[9]);
 console.log(players[9].frozen);
 players[2].tag(players[7]);
 console.log(players[7].frozen);
+players[5].tag(players[7]);
+console.log(players[7].frozen);
 
-console.log(chasers.won());
-console.log(runners.won());
+console.log(chasers.won(runners));
+console.log(runners.won(chasers));
 
 console.log(players[7].flag());
 
+console.log(runners.won(chasers));
 
+players[0].tag(players[1]);
+players[0].tag(players[3]);
+players[0].tag(players[5]);
+players[0].tag(players[7]);
 
+console.log(chasers.won(runners));
 
-// chasers.won();
-// runners.won();
-
-// console.log(chasers.won());
 
 })
 
-
-
-// for (let i=0; i<players.length; i++){
-//            if(players[i].type === 'chaser'){
-//             chasers.add(players[i]);
-//            }
-
-
-// let runners = new Team();
-//        for (let i=0; i<players.length; i++){
-//             runners.add(players[i]);
-//            }
-        
-
-
-    
 

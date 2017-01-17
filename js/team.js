@@ -18,27 +18,36 @@ status frozen.*/
             this.team.push(player);
         }
 
-        this.won = function () {
+        this.won = function (list) {
+        //    for(let i=0; i<this.team.length; i++){
+        //        if (this.type === 'runners' && this.team[i].haveFlag === true){
+        //            return true;
+        //        }
+        //         if (this.type === 'chasers' && this.team[i].frozen === false) {
+        //             return false;
+        //    }
+           
             if (this.type === 'runners') {
                 for (let i = 0; i < this.team.length; i++) {
                     if (this.team[i].haveFlag === true) {
                         return true;
-                    } else {
+                    }
+                }
+                return false;
+            }
                         if (this.type === 'chasers') {
-                            for (i = 0; i < this.team.length; i++) {
-                                if (this.team[i].frozen === false) {
+                            for (i = 0; i < list.team.length; i++) {
+                                if (list.team[i].frozen === false) {
                                     return false;
                                 }
+                                    
+                                }
+                                return true;
                             }
-                        }
-                    }
+                    
+                
 
-                } // end for
-
-
-            }
         }
-
         return this;
 
     };
