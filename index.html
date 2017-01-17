@@ -1,21 +1,42 @@
 <!doctype html>
 
-<html>          
+<html>
 
 <head>
     <title>Freeze Tag</title>
-    <link rel = "stylesheet" href= "style.css">
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
-    <script src = 'app.js'></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src='app.js'></script>
 </head>
 
 <body>
-    <h1>Start Here</h1>
 
+    <header>
+        <h1>Welcome to Freeze Tag!</h1>
+        <h3></h3>
+    </header>
+
+    <main>
+        <section id="chasers">
+            <h1>Chasers</h1>
+            <ul id='chaseList'>
+            </ul>
+        </section>
+
+        <section id="runners">
+            <h1>Runners</h1>
+            <ul id='runList'>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <button id='addChase'>Add Player</button>
+        <button id='addRun'>Add Player</button>
+    </footer>
 
 
 </body>
 
 
 </html>
-

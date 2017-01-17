@@ -9,7 +9,6 @@ module.exports = Player;
 function Player(name) {
     this.name = name;
     this.type = null;
-    // this.status = 'unfrozen';
     this.frozen = false;
     this.tag = function(person){
         if(this.type === 'runners' && this.frozen === false && person.type === 'runners'){

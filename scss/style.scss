@@ -7,6 +7,58 @@
 
 @import 'header';
 
+header{
+    text-align: center;
+}
+
 body{
     background-color: mediumpurple;
+}
+
+main{
+    @include grid-row();
+}
+
+section{
+    @include grid-column(6);
+}
+
+h1{
+    font-size:3em;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    border: 2px solid rebeccapurple;
+     background-color: white;
+}
+
+li{ 
+    font-size: 2em;
+    color: darkblue;
+
+    p{
+        font-size: 1em;
+    }
+}
+
+footer{
+    @include grid-row();
+}
+
+#addChase, #addRun{
+    @include grid-column(2);
+    border:2px solid rebeccapurple;
+    border-radius: 10%;
+    background-color: purple;
+    padding: 10px;
+}
+
+#freeze, #flag{
+    font-size: .5em;
+    border:2px solid rebeccapurple;
+    border-radius: 10%;
+    margin: 2px 10px;
+    padding: 5px;
 }

@@ -34,6 +34,8 @@ runners.add(players[7]);
 chasers.add(players[8]);
 runners.add(players[9]);
 
+showPlayers(players);
+
 console.log(chasers);
 console.log(runners);
 
@@ -52,6 +54,40 @@ console.log(game2result(players));
 console.log(chasers.won(runners));
 
 
-})
+});
+
+function showPlayers(list){
+
+    for(let i=0; i<list.length; i++){
+
+     if (list[i].type === 'chasers'){
+        let parent1 = document.querySelector('#chaseList');
+        let child1 = document.createElement('li');
+        child1.textContent = list[i].name;
+        parent1.appendChild(child1);
+        }
+    
+
+        if (list[i].type === 'runners'){
+        let parent2 = document.querySelector('#runList');
+        let child2 = document.createElement('li');
+        child2.textContent = list[i].name + ' (status: ' + list[i].frozen + ')';
+        parent2.appendChild(child2);
+
+        let freezeButton = document.createElement('button');
+        freezeButton.setAttribute('id', "freeze");
+        freezeButton.textContent = 'Freeze';
+        let flagButton = document.createElement('button');
+        flagButton.setAttribute('id', 'flag');
+        flagButton.textContent = 'Flag';
+        child2.appendChild(freezeButton);
+        child2.appendChild(flagButton);
+            
+
+
+        }
+    }
+    
+};
 
 
